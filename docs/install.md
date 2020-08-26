@@ -1,3 +1,3 @@
 # Установка
 
-    composer require php7lab/eloquent
+    composer require zncore/db

@@ -2,7 +2,7 @@
 
 Зайти в папку `bin`:
 
-    cd vendor/php7lab/eloquent/bin
+    cd vendor/zncore/db/bin
 
 Выполнить миграции:
 
