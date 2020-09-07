@@ -6,10 +6,12 @@ use Illuminate\Database\Schema\Builder;
 use Illuminate\Database\Schema\MySqlBuilder;
 use Illuminate\Database\Schema\PostgresBuilder;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 use PhpLab\Core\Domain\Helpers\EntityHelper;
 use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
-use PhpLab\Eloquent\Db\Enums\DbDriverEnum;
 use PhpLab\Eloquent\Db\Base\BaseEloquentRepository;
+use PhpLab\Eloquent\Db\Enums\DbDriverEnum;
+use PhpLab\Eloquent\Db\Helpers\StructHelper;
 use PhpLab\Eloquent\Fixture\Entities\FixtureEntity;
 
 class DbRepository extends BaseEloquentRepository
@@ -95,6 +97,9 @@ class DbRepository extends BaseEloquentRepository
         $tableAlias = $this->getCapsule()->getAlias();
         /* @var Builder|MySqlBuilder|PostgresBuilder $schema */
         $schema = $this->getSchema();
+        
+        
+        //dd($this->getCapsule()->getDatabaseManager());
         $dbName = $schema->getConnection()->getDatabaseName();
         $collection = new Collection;
         if($schema->getConnection()->getDriverName() == DbDriverEnum::SQLITE) {
@@ -108,10 +113,18 @@ class DbRepository extends BaseEloquentRepository
                 $collection->add($entity);
             }
         } else {
-            $array = $schema->getAllTables();
-            foreach ($array as $item) {
-                $key = 'Tables_in_' . $dbName;
-                $targetTableName = $item->{$key};
+            if($schema->getConnection()->getDriverName() == DbDriverEnum::PGSQL) {
+                $tableCollection = StructHelper::allPostgresTables($schema->getConnection());
+            } else {
+                $tableCollection = StructHelper::allTables($schema);
+            }
+            foreach ($tableCollection as $tableEntity) {
+                $tableName = StructHelper::getTableNameFromEntity($tableEntity);
+                $array[] = $tableAlias->decode('default', $tableName);
+            }
+            foreach ($array as $targetTableName) {
+                //$key = 'Tables_in_' . $dbName;
+                //$targetTableName = $item->{$key};
                 $sourceTableName = $tableAlias->decode('default', $targetTableName);
                 $entityClass = $this->getEntityClass();
                 $entity = EntityHelper::createEntity($entityClass, [

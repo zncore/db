@@ -66,7 +66,9 @@ class FileRepository implements RepositoryInterface, GetEntityClassInterface
     public function loadData($name): FixtureInterface
     {
         $data = $this->getStoreInstance($name)->load();
-        if(ArrayHelper::isAssociative($data)) {
+        if(empty($data)) {
+            return new DataFixture([], []);
+        } elseif(ArrayHelper::isAssociative($data)) {
             return new DataFixture($data['collection'], $data['deps'] ?? []);
         } elseif($data instanceof FixtureInterface) {
             return $data;
