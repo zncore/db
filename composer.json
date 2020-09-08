@@ -16,7 +16,9 @@
   "autoload": {
     "psr-4": {
       "PhpLab\\Eloquent\\": "src",
-      "PhpLab\\Eloquent\\Tests\\": "tests"
+      "PhpLab\\Eloquent\\Tests\\": "tests",
+      "ZnLab\\Eloquent\\": "src",
+      "ZnLab\\Eloquent\\Tests\\": "tests"
     }
   }
 }
