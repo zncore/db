@@ -1,15 +1,15 @@
 <?php
 
-namespace PhpLab\Eloquent\Db\Base;
+namespace ZnCore\Db\Db\Base;
 
 //use Illuminate\Database\Query\Builder as QueryBuilder;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Driver\PDOStatement;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Doctrine\DBAL\Schema\AbstractSchemaManager;
-use PhpLab\Core\Domain\Helpers\EntityHelper;
-use PhpLab\Core\Domain\Interfaces\GetEntityClassInterface;
-use PhpLab\Eloquent\Db\Traits\TableNameTrait;
+use ZnCore\Base\Domain\Helpers\EntityHelper;
+use ZnCore\Base\Domain\Interfaces\GetEntityClassInterface;
+use ZnCore\Db\Db\Traits\TableNameTrait;
 
 abstract class BaseDoctrineRepository implements GetEntityClassInterface
 {

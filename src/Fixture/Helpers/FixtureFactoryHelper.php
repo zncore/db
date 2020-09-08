@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Eloquent\Fixture\Helpers;
+namespace ZnCore\Db\Fixture\Helpers;
 
 use Closure;
 

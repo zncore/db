@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Eloquent\Db\Commands;
+namespace ZnCore\Db\Db\Commands;
 
-use PhpLab\Eloquent\Fixture\Services\FixtureService;
+use ZnCore\Db\Fixture\Services\FixtureService;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;

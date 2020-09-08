@@ -1,14 +1,14 @@
 <?php
 
-namespace PhpLab\Eloquent\Db\Base;
+namespace ZnCore\Db\Db\Base;
 
 use Illuminate\Database\Connection;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Database\Schema\Builder as SchemaBuilder;
-use PhpLab\Core\Domain\Helpers\EntityHelper;
-use PhpLab\Core\Domain\Interfaces\GetEntityClassInterface;
-use PhpLab\Eloquent\Db\Helpers\Manager;
-use PhpLab\Eloquent\Db\Traits\TableNameTrait;
+use ZnCore\Base\Domain\Helpers\EntityHelper;
+use ZnCore\Base\Domain\Interfaces\GetEntityClassInterface;
+use ZnCore\Db\Db\Helpers\Manager;
+use ZnCore\Db\Db\Traits\TableNameTrait;
 
 abstract class BaseEloquentRepository implements GetEntityClassInterface
 {

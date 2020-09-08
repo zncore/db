@@ -3,7 +3,7 @@
 Пример фикстуры:
 
 ```php
-use PhpLab\Eloquent\Fixture\Helpers\FixtureFactoryHelper;
+use ZnCore\Db\Fixture\Helpers\FixtureFactoryHelper;
 
 $fixture = new FixtureFactoryHelper;
 $fixture->setCount(200);

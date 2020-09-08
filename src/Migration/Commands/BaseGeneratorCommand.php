@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Commands;
+namespace ZnCore\Db\Migration\Commands;
 
-use PhpLab\Dev\Generator\Domain\Dto\BuildDto;
-use PhpLab\Dev\Generator\Domain\Scenarios\Input\BaseInputScenario;
+use ZnTool\Dev\Generator\Domain\Dto\BuildDto;
+use ZnTool\Dev\Generator\Domain\Scenarios\Input\BaseInputScenario;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

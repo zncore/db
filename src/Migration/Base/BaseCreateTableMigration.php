@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Base;
+namespace ZnCore\Db\Migration\Base;
 
 use Illuminate\Database\Schema\Builder;
-use PhpLab\Eloquent\Db\Enums\DbDriverEnum;
-use PhpLab\Eloquent\Db\Helpers\Manager;
+use ZnCore\Db\Db\Enums\DbDriverEnum;
+use ZnCore\Db\Db\Helpers\Manager;
 
 abstract class BaseCreateTableMigration extends BaseMigration
 {

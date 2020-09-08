@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Commands;
+namespace ZnCore\Db\Migration\Commands;
 
-use PhpLab\Core\Console\Widgets\LogWidget;
-use PhpLab\Eloquent\Migration\Entities\MigrationEntity;
-use PhpLab\Eloquent\Migration\Services\MigrationService;
+use ZnCore\Base\Console\Widgets\LogWidget;
+use ZnCore\Db\Migration\Entities\MigrationEntity;
+use ZnCore\Db\Migration\Services\MigrationService;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;

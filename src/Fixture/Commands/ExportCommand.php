@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpLab\Eloquent\Fixture\Commands;
+namespace ZnCore\Db\Fixture\Commands;
 
 use Illuminate\Support\Collection;
-use PhpLab\Core\Console\Widgets\LogWidget;
-use PhpLab\Core\Domain\Helpers\EntityHelper;
-use PhpLab\Eloquent\Fixture\Entities\FixtureEntity;
-use PhpLab\Core\Console\Question\ChoiceQuestion;
+use ZnCore\Base\Console\Widgets\LogWidget;
+use ZnCore\Base\Domain\Helpers\EntityHelper;
+use ZnCore\Db\Fixture\Entities\FixtureEntity;
+use ZnCore\Base\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 

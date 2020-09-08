@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Eloquent\Fixture\Traits;
+namespace ZnCore\Db\Fixture\Traits;
 
-use PhpLab\Core\Libs\Store\StoreFile;
+use ZnCore\Base\Libs\Store\StoreFile;
 
 trait ConfigTrait
 {

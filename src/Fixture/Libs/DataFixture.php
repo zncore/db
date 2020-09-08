@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Eloquent\Fixture\Libs;
+namespace ZnCore\Db\Fixture\Libs;
 
 class DataFixture implements FixtureInterface
 {

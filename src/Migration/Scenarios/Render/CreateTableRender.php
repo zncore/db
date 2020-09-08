@@ -1,16 +1,16 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Scenarios\Render;
+namespace ZnCore\Db\Migration\Scenarios\Render;
 
-use PhpLab\Core\Legacy\Code\entities\ClassEntity;
-use PhpLab\Core\Legacy\Code\entities\ClassUseEntity;
-use PhpLab\Core\Legacy\Code\entities\ClassVariableEntity;
-use PhpLab\Core\Legacy\Code\entities\InterfaceEntity;
-use PhpLab\Core\Legacy\Code\enums\AccessEnum;
-use PhpLab\Core\Legacy\Code\helpers\ClassHelper;
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
-use PhpLab\Dev\Generator\Domain\Helpers\TemplateCodeHelper;
-use PhpLab\Dev\Package\Domain\Helpers\PackageHelper;
+use ZnCore\Base\Legacy\Code\entities\ClassEntity;
+use ZnCore\Base\Legacy\Code\entities\ClassUseEntity;
+use ZnCore\Base\Legacy\Code\entities\ClassVariableEntity;
+use ZnCore\Base\Legacy\Code\entities\InterfaceEntity;
+use ZnCore\Base\Legacy\Code\enums\AccessEnum;
+use ZnCore\Base\Legacy\Code\helpers\ClassHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnTool\Dev\Generator\Domain\Helpers\TemplateCodeHelper;
+use ZnTool\Dev\Package\Domain\Helpers\PackageHelper;
 use Zend\Code\Generator\FileGenerator;
 
 class CreateTableRender extends BaseRender
@@ -59,7 +59,7 @@ class CreateTableRender extends BaseRender
 
         $fileGenerator->setNamespace('Migrations');
         $fileGenerator->setUse('Illuminate\Database\Schema\Blueprint');
-        $fileGenerator->setUse('PhpLab\Eloquent\Migration\Base\BaseCreateTableMigration');
+        $fileGenerator->setUse('ZnCore\Db\Migration\Base\BaseCreateTableMigration');
 
         $code = TemplateCodeHelper::generateMigrationClassCode($this->getClassName(), $this->dto->attributes, $this->dto->tableName);
 

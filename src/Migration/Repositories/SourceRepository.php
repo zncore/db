@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Repositories;
+namespace ZnCore\Db\Migration\Repositories;
 
-use PhpLab\Core\Exceptions\InvalidConfigException;
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
-use PhpLab\Eloquent\Fixture\Traits\ConfigTrait;
-use PhpLab\Eloquent\Migration\Entities\MigrationEntity;
+use ZnCore\Base\Exceptions\InvalidConfigException;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnCore\Db\Fixture\Traits\ConfigTrait;
+use ZnCore\Db\Migration\Entities\MigrationEntity;
 
 class SourceRepository
 {

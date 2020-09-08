@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Entities;
+namespace ZnCore\Db\Migration\Entities;
 
 class MigrationEntity
 {

@@ -1,19 +1,19 @@
 <?php
 
-namespace PhpLab\Eloquent\Db\Helpers;
+namespace ZnCore\Db\Db\Helpers;
 
 use Illuminate\Support\Collection;
 use php7rails\domain\repositories\BaseRepository;
-use PhpLab\Core\Domain\Libs\Query;
-use PhpLab\Core\Domain\Helpers\Repository\RelationHelper;
-use PhpLab\Core\Domain\Helpers\Repository\RelationWithHelper;
-use PhpLab\Core\Domain\Interfaces\ReadAllInterface;
-use PhpLab\Core\Domain\Interfaces\Repository\RelationConfigInterface;
+use ZnCore\Base\Domain\Libs\Query;
+use ZnCore\Base\Domain\Helpers\Repository\RelationHelper;
+use ZnCore\Base\Domain\Helpers\Repository\RelationWithHelper;
+use ZnCore\Base\Domain\Interfaces\ReadAllInterface;
+use ZnCore\Base\Domain\Interfaces\Repository\RelationConfigInterface;
 
 /**
  * Class QueryFilter
  *
- * @package PhpLab\Core\Domain\Helpers\Repository
+ * @package ZnCore\Base\Domain\Helpers\Repository
  *
  */
 class QueryFilter

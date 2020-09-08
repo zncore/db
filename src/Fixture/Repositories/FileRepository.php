@@ -1,19 +1,19 @@
 <?php
 
-namespace PhpLab\Eloquent\Fixture\Repositories;
+namespace ZnCore\Db\Fixture\Repositories;
 
 use Illuminate\Support\Collection;
-use PhpLab\Core\Domain\Helpers\EntityHelper;
-use PhpLab\Core\Domain\Interfaces\GetEntityClassInterface;
-use PhpLab\Core\Domain\Interfaces\Repository\RepositoryInterface;
-use PhpLab\Core\Exceptions\InvalidConfigException;
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
-use PhpLab\Core\Libs\Store\StoreFile;
-use PhpLab\Eloquent\Fixture\Entities\FixtureEntity;
-use PhpLab\Eloquent\Fixture\Libs\DataFixture;
-use PhpLab\Eloquent\Fixture\Libs\FixtureInterface;
-use PhpLab\Eloquent\Fixture\Traits\ConfigTrait;
+use ZnCore\Base\Domain\Helpers\EntityHelper;
+use ZnCore\Base\Domain\Interfaces\GetEntityClassInterface;
+use ZnCore\Base\Domain\Interfaces\Repository\RepositoryInterface;
+use ZnCore\Base\Exceptions\InvalidConfigException;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnCore\Base\Libs\Store\StoreFile;
+use ZnCore\Db\Fixture\Entities\FixtureEntity;
+use ZnCore\Db\Fixture\Libs\DataFixture;
+use ZnCore\Db\Fixture\Libs\FixtureInterface;
+use ZnCore\Db\Fixture\Traits\ConfigTrait;
 
 class FileRepository implements RepositoryInterface, GetEntityClassInterface
 {

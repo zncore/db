@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration;
+namespace ZnCore\Db\Migration;
 
-use PhpLab\Core\Domain\Interfaces\DomainInterface;
+use ZnCore\Base\Domain\Interfaces\DomainInterface;
 
 class Domain implements DomainInterface
 {

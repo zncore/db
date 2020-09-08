@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Repositories\File;
+namespace ZnCore\Db\Migration\Repositories\File;
 
-use PhpLab\Eloquent\Migration\Entities\GenerateEntity;
-use PhpLab\Eloquent\Migration\Interfaces\Repositories\GenerateRepositoryInterface;
+use ZnCore\Db\Migration\Entities\GenerateEntity;
+use ZnCore\Db\Migration\Interfaces\Repositories\GenerateRepositoryInterface;
 
 class GenerateRepository implements GenerateRepositoryInterface
 {

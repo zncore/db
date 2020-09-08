@@ -1,13 +1,13 @@
 <?php
 
-namespace PhpLab\Eloquent\Db\Helpers;
+namespace ZnCore\Db\Db\Helpers;
 
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Support\Collection;
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
-use PhpLab\Eloquent\Db\Entities\SchemaEntity;
-use PhpLab\Eloquent\Db\Entities\TableEntity;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Db\Db\Entities\SchemaEntity;
+use ZnCore\Db\Db\Entities\TableEntity;
 
 class StructHelper
 {

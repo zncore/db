@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Scenarios\Input;
+namespace ZnCore\Db\Migration\Scenarios\Input;
 
 use Symfony\Component\Console\Question\Question;
 

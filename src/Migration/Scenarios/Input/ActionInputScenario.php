@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Scenarios\Input;
+namespace ZnCore\Db\Migration\Scenarios\Input;
 
-use PhpLab\Eloquent\Migration\Enums\GenerateActionEnum;
+use ZnCore\Db\Migration\Enums\GenerateActionEnum;
 use Symfony\Component\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Question\Question;
 

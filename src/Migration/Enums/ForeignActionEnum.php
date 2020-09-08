@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Enums;
+namespace ZnCore\Db\Migration\Enums;
 
 class ForeignActionEnum
 {

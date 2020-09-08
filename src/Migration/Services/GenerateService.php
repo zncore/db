@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Services;
+namespace ZnCore\Db\Migration\Services;
 
-use PhpLab\Core\Domain\Base\BaseService;
-use PhpLab\Eloquent\Migration\Interfaces\Repositories\GenerateRepositoryInterface;
-use PhpLab\Eloquent\Migration\Interfaces\Services\GenerateServiceInterface;
-use PhpLab\Eloquent\Migration\Scenarios\Render\CreateTableRender;
-use PhpLab\Core\Helpers\ClassHelper;
+use ZnCore\Base\Domain\Base\BaseService;
+use ZnCore\Db\Migration\Interfaces\Repositories\GenerateRepositoryInterface;
+use ZnCore\Db\Migration\Interfaces\Services\GenerateServiceInterface;
+use ZnCore\Db\Migration\Scenarios\Render\CreateTableRender;
+use ZnCore\Base\Helpers\ClassHelper;
 
 class GenerateService extends BaseService implements GenerateServiceInterface
 {

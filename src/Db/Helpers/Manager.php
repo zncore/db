@@ -1,15 +1,15 @@
 <?php
 
-namespace PhpLab\Eloquent\Db\Helpers;
+namespace ZnCore\Db\Db\Helpers;
 
 use Illuminate\Container\Container;
-use PhpLab\Core\Helpers\DbHelper;
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
-use PhpLab\Core\Libs\Env\DotEnvHelper;
-use PhpLab\Eloquent\Db\Enums\DbDriverEnum;
-use PhpLab\Eloquent\Db\Libs\TableAlias;
-use PhpLab\Eloquent\Fixture\Traits\ConfigTrait;
+use ZnCore\Base\Helpers\DbHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnCore\Base\Libs\Env\DotEnvHelper;
+use ZnCore\Db\Db\Enums\DbDriverEnum;
+use ZnCore\Db\Db\Libs\TableAlias;
+use ZnCore\Db\Fixture\Traits\ConfigTrait;
 use Illuminate\Database\Capsule\Manager as CapsuleManager;
 
 class Manager extends CapsuleManager

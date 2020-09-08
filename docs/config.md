@@ -46,7 +46,7 @@ ELOQUENT_CONFIG_FILE=config/eloquent/main.yaml
 
 ```yaml
 services:
-    PhpLab\Eloquent\Db\Helpers\Manager:
+    ZnCore\Db\Helpers\Manager:
         arguments:
             $mainConfigFile: '%env(ELOQUENT_CONFIG_FILE)%'
 ```
@@ -57,7 +57,7 @@ services:
 
 require __DIR__ . '/vendor/autoload.php';
 
-\PhpLab\Core\Libs\Env\DotEnvHelper::init();
+\ZnCore\Base\Libs\Env\DotEnvHelper::init();
 
 $eloquentConfigFile = $_ENV['ELOQUENT_CONFIG_FILE'];
 $capsule = new Manager(null, $eloquentConfigFile);

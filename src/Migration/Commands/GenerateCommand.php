@@ -1,13 +1,13 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Commands;
+namespace ZnCore\Db\Migration\Commands;
 
-use PhpLab\Eloquent\Migration\Interfaces\Services\GenerateServiceInterface;
-use PhpLab\Eloquent\Migration\Scenarios\Input\ActionInputScenario;
-use PhpLab\Eloquent\Migration\Scenarios\Input\BaseInputScenario;
-use PhpLab\Eloquent\Migration\Scenarios\Input\DomainNamespaceInputScenario;
-use PhpLab\Eloquent\Migration\Scenarios\Input\TableNameInputScenario;
-use PhpLab\Eloquent\Migration\Scenarios\Input\TypeInputScenario;
+use ZnCore\Db\Migration\Interfaces\Services\GenerateServiceInterface;
+use ZnCore\Db\Migration\Scenarios\Input\ActionInputScenario;
+use ZnCore\Db\Migration\Scenarios\Input\BaseInputScenario;
+use ZnCore\Db\Migration\Scenarios\Input\DomainNamespaceInputScenario;
+use ZnCore\Db\Migration\Scenarios\Input\TableNameInputScenario;
+use ZnCore\Db\Migration\Scenarios\Input\TypeInputScenario;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Eloquent\Db\Enums;
+namespace ZnCore\Db\Db\Enums;
 
-use PhpLab\Core\Domain\Base\BaseEnum;
+use ZnCore\Base\Domain\Base\BaseEnum;
 
 class DbDriverEnum extends BaseEnum
 {

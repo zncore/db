@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Eloquent\Db\Entities;
+namespace ZnCore\Db\Db\Entities;
 
 class TableEntity
 {

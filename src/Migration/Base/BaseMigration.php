@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Base;
+namespace ZnCore\Db\Migration\Base;
 
 use Illuminate\Database\Schema\Builder;
-use PhpLab\Eloquent\Db\Traits\TableNameTrait;
+use ZnCore\Db\Db\Traits\TableNameTrait;
 
 abstract class BaseMigration
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Eloquent\Db\Libs;
+namespace ZnCore\Db\Db\Libs;
 
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 
 class TableAlias
 {

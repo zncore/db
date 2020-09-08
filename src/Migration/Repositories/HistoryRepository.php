@@ -1,15 +1,15 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Repositories;
+namespace ZnCore\Db\Migration\Repositories;
 
 use Illuminate\Database\Schema\Blueprint;
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
-use PhpLab\Eloquent\Db\Base\BaseEloquentRepository;
-use PhpLab\Eloquent\Migration\Base\BaseCreateTableMigration;
-use PhpLab\Eloquent\Migration\Entities\MigrationEntity;
-use PhpLab\Core\Helpers\ClassHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Db\Db\Base\BaseEloquentRepository;
+use ZnCore\Db\Migration\Base\BaseCreateTableMigration;
+use ZnCore\Db\Migration\Entities\MigrationEntity;
+use ZnCore\Base\Helpers\ClassHelper;
 
-//use PhpLab\Eloquent\Db\Helpers\TableAliasHelper;
+//use ZnCore\Db\Db\Helpers\TableAliasHelper;
 
 class HistoryRepository extends BaseEloquentRepository
 {

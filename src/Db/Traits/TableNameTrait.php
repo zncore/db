@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Eloquent\Db\Traits;
+namespace ZnCore\Db\Db\Traits;
 
 trait TableNameTrait
 {

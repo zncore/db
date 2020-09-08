@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Scenarios\Render;
+namespace ZnCore\Db\Migration\Scenarios\Render;
 
 abstract class BaseRender
 {

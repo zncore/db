@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Eloquent\Fixture\Entities;
+namespace ZnCore\Db\Fixture\Entities;
 
 class FixtureEntity
 {

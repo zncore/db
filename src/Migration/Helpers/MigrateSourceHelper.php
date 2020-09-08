@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Helpers;
+namespace ZnCore\Db\Migration\Helpers;
 
 
 class MigrateSourceHelper

@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpLab\Eloquent\Db\Helpers;
+namespace ZnCore\Db\Db\Helpers;
 
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
-use PhpLab\Core\Helpers\DbHelper;
+use ZnCore\Base\Helpers\DbHelper;
 
 class DoctrineHelper
 {

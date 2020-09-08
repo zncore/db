@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Interfaces\Repositories;
+namespace ZnCore\Db\Migration\Interfaces\Repositories;
 
-use PhpLab\Core\Domain\Interfaces\GetEntityClassInterface;
+use ZnCore\Base\Domain\Interfaces\GetEntityClassInterface;
 
 interface GenerateRepositoryInterface extends GetEntityClassInterface
 {

@@ -1,18 +1,18 @@
 <?php
 
-namespace PhpLab\Eloquent\Fixture\Repositories;
+namespace ZnCore\Db\Fixture\Repositories;
 
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Database\Schema\MySqlBuilder;
 use Illuminate\Database\Schema\PostgresBuilder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use PhpLab\Core\Domain\Helpers\EntityHelper;
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
-use PhpLab\Eloquent\Db\Base\BaseEloquentRepository;
-use PhpLab\Eloquent\Db\Enums\DbDriverEnum;
-use PhpLab\Eloquent\Db\Helpers\StructHelper;
-use PhpLab\Eloquent\Fixture\Entities\FixtureEntity;
+use ZnCore\Base\Domain\Helpers\EntityHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Db\Db\Base\BaseEloquentRepository;
+use ZnCore\Db\Db\Enums\DbDriverEnum;
+use ZnCore\Db\Db\Helpers\StructHelper;
+use ZnCore\Db\Fixture\Entities\FixtureEntity;
 
 class DbRepository extends BaseEloquentRepository
 {
@@ -22,7 +22,7 @@ class DbRepository extends BaseEloquentRepository
         return FixtureEntity::class;
     }
 
-    public function __construct(\PhpLab\Eloquent\Db\Helpers\Manager $capsule)
+    public function __construct(\ZnCore\Db\Db\Helpers\Manager $capsule)
     {
         parent::__construct($capsule);
 

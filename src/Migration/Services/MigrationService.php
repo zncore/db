@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Services;
+namespace ZnCore\Db\Migration\Services;
 
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
-use PhpLab\Eloquent\Migration\Entities\MigrationEntity;
-use PhpLab\Eloquent\Migration\Repositories\HistoryRepository;
-use PhpLab\Eloquent\Migration\Repositories\SourceRepository;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Db\Migration\Entities\MigrationEntity;
+use ZnCore\Db\Migration\Repositories\HistoryRepository;
+use ZnCore\Db\Migration\Repositories\SourceRepository;
 
 class MigrationService
 {

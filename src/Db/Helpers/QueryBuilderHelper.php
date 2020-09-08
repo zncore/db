@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpLab\Eloquent\Db\Helpers;
+namespace ZnCore\Db\Db\Helpers;
 
 use Illuminate\Database\Query\Builder;
-use PhpLab\Core\Domain\Libs\Query;
-use PhpLab\Core\Domain\Entities\Query\Where;
+use ZnCore\Base\Domain\Libs\Query;
+use ZnCore\Base\Domain\Entities\Query\Where;
 
 class QueryBuilderHelper
 {

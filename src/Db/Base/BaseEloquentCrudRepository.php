@@ -1,18 +1,18 @@
 <?php
 
-namespace PhpLab\Eloquent\Db\Base;
+namespace ZnCore\Db\Db\Base;
 
 use Illuminate\Database\QueryException;
-use PhpLab\Core\Domain\Enums\OperatorEnum;
-use PhpLab\Core\Domain\Exceptions\UnprocessibleEntityException;
-use PhpLab\Core\Domain\Helpers\EntityHelper;
-use PhpLab\Core\Domain\Interfaces\Entity\EntityIdInterface;
-use PhpLab\Core\Domain\Interfaces\Repository\CrudRepositoryInterface;
-use PhpLab\Core\Domain\Libs\Query;
-use PhpLab\Core\Exceptions\NotFoundException;
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
-use PhpLab\Eloquent\Db\Helpers\QueryBuilderHelper;
-use PhpLab\Eloquent\Db\Helpers\QueryFilter;
+use ZnCore\Base\Domain\Enums\OperatorEnum;
+use ZnCore\Base\Domain\Exceptions\UnprocessibleEntityException;
+use ZnCore\Base\Domain\Helpers\EntityHelper;
+use ZnCore\Base\Domain\Interfaces\Entity\EntityIdInterface;
+use ZnCore\Base\Domain\Interfaces\Repository\CrudRepositoryInterface;
+use ZnCore\Base\Domain\Libs\Query;
+use ZnCore\Base\Exceptions\NotFoundException;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Db\Db\Helpers\QueryBuilderHelper;
+use ZnCore\Db\Db\Helpers\QueryFilter;
 
 abstract class BaseEloquentCrudRepository extends BaseEloquentRepository implements CrudRepositoryInterface
 {

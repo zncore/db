@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Eloquent\Migration\Interfaces\Services;
+namespace ZnCore\Db\Migration\Interfaces\Services;
 
 interface GenerateServiceInterface
 {

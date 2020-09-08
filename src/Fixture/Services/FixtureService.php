@@ -1,13 +1,13 @@
 <?php
 
-namespace PhpLab\Eloquent\Fixture\Services;
+namespace ZnCore\Db\Fixture\Services;
 
 use Illuminate\Support\Collection;
-use PhpLab\Core\Domain\Helpers\EntityHelper;
-use PhpLab\Eloquent\Fixture\Entities\FixtureEntity;
-use PhpLab\Eloquent\Fixture\Repositories\DbRepository;
-use PhpLab\Eloquent\Fixture\Repositories\FileRepository;
-use PhpLab\Eloquent\Migration\Repositories\HistoryRepository;
+use ZnCore\Base\Domain\Helpers\EntityHelper;
+use ZnCore\Db\Fixture\Entities\FixtureEntity;
+use ZnCore\Db\Fixture\Repositories\DbRepository;
+use ZnCore\Db\Fixture\Repositories\FileRepository;
+use ZnCore\Db\Migration\Repositories\HistoryRepository;
 
 class FixtureService
 {
