@@ -3,9 +3,9 @@
 namespace ZnCore\Db\Fixture\Repositories;
 
 use Illuminate\Support\Collection;
-use ZnCore\Base\Domain\Helpers\EntityHelper;
-use ZnCore\Base\Domain\Interfaces\GetEntityClassInterface;
-use ZnCore\Base\Domain\Interfaces\Repository\RepositoryInterface;
+use ZnCore\Domain\Helpers\EntityHelper;
+use ZnCore\Domain\Interfaces\GetEntityClassInterface;
+use ZnCore\Domain\Interfaces\Repository\RepositoryInterface;
 use ZnCore\Base\Exceptions\InvalidConfigException;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;

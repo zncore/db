@@ -2,7 +2,7 @@
 
 namespace ZnCore\Db\Migration\Enums;
 
-use ZnCore\Base\Domain\Base\BaseEnum;
+use ZnCore\Domain\Base\BaseEnum;
 
 class GenerateActionEnum extends BaseEnum
 {

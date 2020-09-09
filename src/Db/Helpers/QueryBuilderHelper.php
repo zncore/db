@@ -3,8 +3,8 @@
 namespace ZnCore\Db\Db\Helpers;
 
 use Illuminate\Database\Query\Builder;
-use ZnCore\Base\Domain\Libs\Query;
-use ZnCore\Base\Domain\Entities\Query\Where;
+use ZnCore\Domain\Libs\Query;
+use ZnCore\Domain\Entities\Query\Where;
 
 class QueryBuilderHelper
 {

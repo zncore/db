@@ -7,8 +7,8 @@ use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Driver\PDOStatement;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Doctrine\DBAL\Schema\AbstractSchemaManager;
-use ZnCore\Base\Domain\Helpers\EntityHelper;
-use ZnCore\Base\Domain\Interfaces\GetEntityClassInterface;
+use ZnCore\Domain\Helpers\EntityHelper;
+use ZnCore\Domain\Interfaces\GetEntityClassInterface;
 use ZnCore\Db\Db\Traits\TableNameTrait;
 
 abstract class BaseDoctrineRepository implements GetEntityClassInterface

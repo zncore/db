@@ -4,16 +4,16 @@ namespace ZnCore\Db\Db\Helpers;
 
 use Illuminate\Support\Collection;
 use php7rails\domain\repositories\BaseRepository;
-use ZnCore\Base\Domain\Libs\Query;
-use ZnCore\Base\Domain\Helpers\Repository\RelationHelper;
-use ZnCore\Base\Domain\Helpers\Repository\RelationWithHelper;
-use ZnCore\Base\Domain\Interfaces\ReadAllInterface;
-use ZnCore\Base\Domain\Interfaces\Repository\RelationConfigInterface;
+use ZnCore\Domain\Libs\Query;
+use ZnCore\Domain\Helpers\Repository\RelationHelper;
+use ZnCore\Domain\Helpers\Repository\RelationWithHelper;
+use ZnCore\Domain\Interfaces\ReadAllInterface;
+use ZnCore\Domain\Interfaces\Repository\RelationConfigInterface;
 
 /**
  * Class QueryFilter
  *
- * @package ZnCore\Base\Domain\Helpers\Repository
+ * @package ZnCore\Domain\Helpers\Repository
  *
  */
 class QueryFilter

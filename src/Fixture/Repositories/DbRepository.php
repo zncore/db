@@ -7,7 +7,7 @@ use Illuminate\Database\Schema\MySqlBuilder;
 use Illuminate\Database\Schema\PostgresBuilder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use ZnCore\Base\Domain\Helpers\EntityHelper;
+use ZnCore\Domain\Helpers\EntityHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Db\Db\Base\BaseEloquentRepository;
 use ZnCore\Db\Db\Enums\DbDriverEnum;

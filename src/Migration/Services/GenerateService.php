@@ -2,7 +2,7 @@
 
 namespace ZnCore\Db\Migration\Services;
 
-use ZnCore\Base\Domain\Base\BaseService;
+use ZnCore\Domain\Base\BaseService;
 use ZnCore\Db\Migration\Interfaces\Repositories\GenerateRepositoryInterface;
 use ZnCore\Db\Migration\Interfaces\Services\GenerateServiceInterface;
 use ZnCore\Db\Migration\Scenarios\Render\CreateTableRender;

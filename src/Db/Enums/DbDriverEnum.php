@@ -2,7 +2,7 @@
 
 namespace ZnCore\Db\Db\Enums;
 
-use ZnCore\Base\Domain\Base\BaseEnum;
+use ZnCore\Domain\Base\BaseEnum;
 
 class DbDriverEnum extends BaseEnum
 {

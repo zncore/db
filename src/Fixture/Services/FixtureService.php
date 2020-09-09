@@ -3,7 +3,7 @@
 namespace ZnCore\Db\Fixture\Services;
 
 use Illuminate\Support\Collection;
-use ZnCore\Base\Domain\Helpers\EntityHelper;
+use ZnCore\Domain\Helpers\EntityHelper;
 use ZnCore\Db\Fixture\Entities\FixtureEntity;
 use ZnCore\Db\Fixture\Repositories\DbRepository;
 use ZnCore\Db\Fixture\Repositories\FileRepository;

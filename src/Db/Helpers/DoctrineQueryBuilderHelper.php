@@ -3,9 +3,9 @@
 namespace ZnCore\Db\Db\Helpers;
 
 use Illuminate\Database\Query\Builder;
-use ZnCore\Base\Domain\Enums\OperatorEnum;
-use ZnCore\Base\Domain\Libs\Query;
-use ZnCore\Base\Domain\Entities\Query\Where;
+use ZnCore\Domain\Enums\OperatorEnum;
+use ZnCore\Domain\Libs\Query;
+use ZnCore\Domain\Entities\Query\Where;
 use Doctrine\DBAL\Query\QueryBuilder;
 
 class DoctrineQueryBuilderHelper
