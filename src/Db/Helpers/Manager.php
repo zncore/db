@@ -3,7 +3,7 @@
 namespace ZnCore\Db\Db\Helpers;
 
 use Illuminate\Container\Container;
-use ZnCore\Base\Helpers\DbHelper;
+use ZnCore\Db\Db\Helpers\DbHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 use ZnCore\Base\Libs\Env\DotEnvHelper;

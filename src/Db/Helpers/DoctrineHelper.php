@@ -5,7 +5,7 @@ namespace ZnCore\Db\Db\Helpers;
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
-use ZnCore\Base\Helpers\DbHelper;
+use ZnCore\Db\Db\Helpers\DbHelper;
 
 class DoctrineHelper
 {
