@@ -2,7 +2,7 @@
 
 namespace ZnCore\Db\Migration\Commands;
 
-use ZnCore\Base\Console\Widgets\LogWidget;
+use ZnLib\Console\Symfony4\Widgets\LogWidget;
 use ZnCore\Db\Migration\Entities\MigrationEntity;
 use ZnCore\Db\Migration\Services\MigrationService;
 use Symfony\Component\Console\Command\Command;

@@ -3,11 +3,11 @@
 namespace ZnCore\Db\Fixture\Commands;
 
 use Illuminate\Database\Eloquent\Collection;
-use ZnCore\Base\Console\Widgets\LogWidget;
+use ZnLib\Console\Symfony4\Widgets\LogWidget;
 use ZnCore\Domain\Helpers\EntityHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Db\Fixture\Entities\FixtureEntity;
-use ZnCore\Base\Console\Question\ChoiceQuestion;
+use ZnLib\Console\Symfony4\Question\ChoiceQuestion;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 

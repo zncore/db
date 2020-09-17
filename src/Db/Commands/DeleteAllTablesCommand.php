@@ -5,7 +5,7 @@ namespace ZnCore\Db\Db\Commands;
 use Illuminate\Support\Collection;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Db\Fixture\Entities\FixtureEntity;
-use ZnCore\Base\Console\Helpers\OutputHepler;
+use ZnLib\Console\Symfony4\Helpers\OutputHepler;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
