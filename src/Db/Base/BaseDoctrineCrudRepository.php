@@ -122,7 +122,7 @@ abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository impleme
                 ->values($arraySnakeCase);
 
             $lastId = $this->executeQuery($queryBuilder);
-            print_r($lastId);exit;
+            //print_r($lastId);exit;
             //print_r($lastId);exit;
             $entity->setId($lastId);
         } catch (QueryException $e) {
