@@ -3,12 +3,14 @@
 namespace ZnCore\Db\Db\Helpers;
 
 use Illuminate\Support\Collection;
+use Packages\Eav\Domain\Repositories\Eloquent\FieldRepository;
 use php7rails\domain\repositories\BaseRepository;
 use ZnCore\Domain\Libs\Query;
 use ZnCore\Domain\Helpers\Repository\RelationHelper;
 use ZnCore\Domain\Helpers\Repository\RelationWithHelper;
 use ZnCore\Domain\Interfaces\ReadAllInterface;
 use ZnCore\Domain\Interfaces\Repository\RelationConfigInterface;
+use ZnCore\Domain\Relations\libs\RelationLoader;
 
 /**
  * Class QueryFilter
@@ -39,12 +41,27 @@ class QueryFilter
         return $query;
     }
 
-    public function loadRelations(Collection $data)
+    public function loadRelations(Collection $collection)
     {
-        if (empty($this->with)) {
-            return $data;
+        $with = $this->query->getParam(Query::WITH);
+
+        if(method_exists($this->repository, 'relations2')) {
+            //prr($with);
+            $relationLoader = new RelationLoader;
+            $relationLoader->setRelations($this->repository->relations2());
+            $relationLoader->setRepository($this->repository);
+            $relationLoader->loadRelations($collection, $this->query);
+            return $collection;
         }
-        $collection = RelationHelper::load($this->repository, $this->query, $data);
+
+        if (empty($this->with)) {
+            return $collection;
+        }
+        /*if($this->repository instanceof FieldRepository) {
+            prr($with);
+        }*/
+        $collection = RelationHelper::load($this->repository, $this->query, $collection);
+        
         //dd($collection);
         return $collection;
     }
