@@ -5,10 +5,10 @@ namespace ZnCore\Db\Db\Base;
 use Illuminate\Database\Connection;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Database\Schema\Builder as SchemaBuilder;
-use ZnCore\Domain\Helpers\EntityHelper;
-use ZnCore\Domain\Interfaces\GetEntityClassInterface;
 use ZnCore\Db\Db\Helpers\Manager;
 use ZnCore\Db\Db\Traits\TableNameTrait;
+use ZnCore\Domain\Helpers\EntityHelper;
+use ZnCore\Domain\Interfaces\GetEntityClassInterface;
 
 abstract class BaseEloquentRepository implements GetEntityClassInterface
 {

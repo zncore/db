@@ -3,14 +3,12 @@
 namespace ZnCore\Db\Db\Helpers;
 
 use Illuminate\Container\Container;
-use ZnCore\Db\Db\Helpers\DbHelper;
+use Illuminate\Database\Capsule\Manager as CapsuleManager;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
-use ZnCore\Base\Libs\Env\DotEnvHelper;
 use ZnCore\Db\Db\Enums\DbDriverEnum;
 use ZnCore\Db\Db\Libs\TableAlias;
 use ZnCore\Db\Fixture\Traits\ConfigTrait;
-use Illuminate\Database\Capsule\Manager as CapsuleManager;
 
 class Manager extends CapsuleManager
 {
@@ -26,16 +24,21 @@ class Manager extends CapsuleManager
         $this->tableAlias = new TableAlias;
         $connections = DbHelper::getConfigFromEnv();
         foreach ($connections as $connectionName => $connectionConfig) {
-            //dd($connectionConfig);
-            if ( ! isset($connectionConfig['map'])) {
+            if (!isset($connectionConfig['map'])) {
                 $connectionConfig['map'] = ArrayHelper::getValue($config, 'connection.map', []);
             }
             $connectionConfig['database'] = $connectionConfig['dbname'];
-            if($connectionConfig['driver'] == DbDriverEnum::SQLITE) {
+            if ($connectionConfig['driver'] == DbDriverEnum::SQLITE) {
                 FileHelper::touch($connectionConfig['database']);
             }
             $this->addConnection($connectionConfig);
-            $this->getAlias()->addMap($connectionName, ArrayHelper::getValue($connectionConfig, 'map', []));
+            $map = ArrayHelper::getValue($connectionConfig, 'map', []);
+            if ($connectionConfig['driver'] !== DbDriverEnum::PGSQL) {
+                foreach ($map as $from => &$to) {
+                    $to = str_replace('.', '_', $to);
+                }
+            }
+            $this->getAlias()->addMap($connectionName, $map);
         }
         $this->bootEloquent();
     }
@@ -51,7 +54,7 @@ class Manager extends CapsuleManager
         $connections = ArrayHelper::getValue($config, 'connections', []);
         if ($connections) {
             if (empty($defaultConnection)) {
-                if ( ! empty($connections['default'])) {
+                if (!empty($connections['default'])) {
                     $defaultConnection = 'default';
                 } else {
                     $defaultConnection = ArrayHelper::firstKey($connections);
@@ -66,7 +69,7 @@ class Manager extends CapsuleManager
             //dd($connections);
         }
         foreach ($connections as &$connection) {
-            if(!empty($connection['dsn'])) {
+            if (!empty($connection['dsn'])) {
                 $connectionFromDsn = DbHelper::parseDsn($connection['dsn']);
                 $connection = array_merge($connectionFromDsn, $connection);
             }

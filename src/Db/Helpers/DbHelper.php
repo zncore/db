@@ -10,6 +10,20 @@ use ZnCore\Db\Db\Enums\DbDriverEnum;
 class DbHelper
 {
 
+    static function generateRawTableName(string $tableName): string {
+        $items = explode('.', $tableName);
+        return '"' . implode('"."', $items) . '"';
+    }
+
+    static function isHasSchemaInTableName(string $tableName): bool {
+        return strpos($tableName, '.') !== false;
+    }
+
+    static function extractSchemaFormTableName(string $tableName): string {
+        $tableName = str_replace('"', '', $tableName);
+        return explode('.', $tableName)[0];
+    }
+
     static function buildConfigForPdo(array $config): array
     {
         if ($config['driver'] == DbDriverEnum::SQLITE) {
