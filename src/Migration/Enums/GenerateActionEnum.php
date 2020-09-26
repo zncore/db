@@ -2,9 +2,7 @@
 
 namespace ZnCore\Db\Migration\Enums;
 
-use ZnCore\Domain\Base\BaseEnum;
-
-class GenerateActionEnum extends BaseEnum
+class GenerateActionEnum
 {
 
     const CREATE_TABLE = 'create table';

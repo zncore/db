@@ -2,9 +2,7 @@
 
 namespace ZnCore\Db\Db\Enums;
 
-use ZnCore\Domain\Base\BaseEnum;
-
-class DbDriverEnum extends BaseEnum
+class DbDriverEnum
 {
 
     const MYSQL = 'mysql';
