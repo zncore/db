@@ -42,12 +42,12 @@ class FixtureFactoryHelper
         $this->count = $count;
     }
 
-    public function getCallback(): Closure
+    public function getCallback()
     {
         return $this->callback;
     }
 
-    public function setCallback(Closure $callback): void
+    public function setCallback($callback): void
     {
         $this->callback = $callback;
     }
