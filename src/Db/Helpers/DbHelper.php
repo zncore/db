@@ -3,25 +3,19 @@
 namespace ZnCore\Db\Db\Helpers;
 
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
-use ZnCore\Base\Libs\Env\DotEnvHelper;
+use ZnCore\Base\Libs\DotEnv\DotEnv;
 use ZnCore\Db\Db\Enums\DbDriverEnum;
 
-// todo: перенести в zncore/db
 class DbHelper
 {
 
-    static function generateRawTableName(string $tableName): string {
-        $items = explode('.', $tableName);
-        return '"' . implode('"."', $items) . '"';
-    }
-
-    static function isHasSchemaInTableName(string $tableName): bool {
-        return strpos($tableName, '.') !== false;
-    }
-
-    static function extractSchemaFormTableName(string $tableName): string {
-        $tableName = str_replace('"', '', $tableName);
-        return explode('.', $tableName)[0];
+    static function encodeDirection($direction)
+    {
+        $directions = [
+            SORT_ASC => 'asc',
+            SORT_DESC => 'desc',
+        ];
+        return $directions[$direction];
     }
 
     static function buildConfigForPdo(array $config): array
@@ -50,7 +44,7 @@ class DbHelper
         if (!empty($_ENV['DATABASE_URL'])) {
             $connections['default'] = DbHelper::parseDsn($_ENV['DATABASE_URL']);
         } else {
-            $config = DotEnvHelper::get('db');
+            $config = DotEnv::get('db');
             $isFlatConfig = !is_array(ArrayHelper::first($config));
             if ($isFlatConfig) {
                 $connections['default'] = $config;
@@ -62,25 +56,6 @@ class DbHelper
             $connection = self::prepareConfig($connection);
         }
         return $connections;
-    }
-
-    private static function prepareConfig($connection)
-    {
-
-        $connection['driver'] = $connection['driver'] ?? $connection['connection'];
-        $connection['dbname'] = $connection['dbname'] ?? $connection['database'];
-
-        $connection['host'] = $connection['host'] ?? '127.0.0.1';
-        $connection['driver'] = $connection['driver'] ?? 'mysql';
-
-        if (!empty($connection['dbname'])) {
-            $connection['dbname'] = rtrim($connection['dbname'], '/');
-        }
-
-        unset($connection['database']);
-        unset($connection['connection']);
-
-        return $connection;
     }
 
     static function parseDsn($dsn)
@@ -95,6 +70,24 @@ class DbHelper
             'password' => ArrayHelper::getValue($dsnConfig, 'pass'),
         ];
         return $connectionCofig;
+    }
+
+    private static function prepareConfig($connection)
+    {
+        $connection['driver'] = $connection['driver'] ?? $connection['connection'];
+        $connection['dbname'] = $connection['dbname'] ?? $connection['database'];
+
+        $connection['host'] = $connection['host'] ?? '127.0.0.1';
+        $connection['driver'] = $connection['driver'] ?? 'mysql';
+
+        if (!empty($connection['dbname'])) {
+            $connection['dbname'] = rtrim($connection['dbname'], '/');
+        }
+
+        unset($connection['database']);
+        unset($connection['connection']);
+
+        return $connection;
     }
 
 }

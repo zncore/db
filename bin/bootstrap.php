@@ -1,7 +1,7 @@
 <?php
 
 use Symfony\Component\Console\Application;
-use ZnCore\Db\Db\Helpers\Manager;
+use ZnCore\Db\Db\Capsule\Manager;
 
 /**
  * @var Application $application

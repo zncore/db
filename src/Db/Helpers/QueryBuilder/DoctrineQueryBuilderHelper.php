@@ -1,14 +1,16 @@
 <?php
 
-namespace ZnCore\Db\Db\Helpers;
+namespace ZnCore\Db\Db\Helpers\QueryBuilder;
 
 use Illuminate\Database\Query\Builder;
+use ZnCore\Db\Db\Helpers\DbHelper;
+use ZnCore\Db\Db\Interfaces\QueryBuilderInterface;
 use ZnCore\Domain\Enums\OperatorEnum;
 use ZnCore\Domain\Libs\Query;
 use ZnCore\Domain\Entities\Query\Where;
 use Doctrine\DBAL\Query\QueryBuilder;
 
-class DoctrineQueryBuilderHelper
+class DoctrineQueryBuilderHelper implements QueryBuilderInterface
 {
 
     public static function setWhere(Query $query, QueryBuilder $queryBuilder)
@@ -100,18 +102,9 @@ class DoctrineQueryBuilderHelper
         $queryArr = $query->toArray();
         if ( ! empty($queryArr[Query::ORDER])) {
             foreach ($queryArr[Query::ORDER] as $field => $direction) {
-                $queryBuilder->orderBy($field, self::encodeDirection($direction));
+                $queryBuilder->orderBy($field, DbHelper::encodeDirection($direction));
             }
         }
-    }
-
-    private static function encodeDirection($direction)
-    {
-        $directions = [
-            SORT_ASC => 'asc',
-            SORT_DESC => 'desc',
-        ];
-        return $directions[$direction];
     }
 
     public static function setSelect(Query $query, QueryBuilder $queryBuilder)

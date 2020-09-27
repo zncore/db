@@ -1,12 +1,13 @@
 <?php
 
-namespace ZnCore\Db\Db\Helpers;
+namespace ZnCore\Db\Db\Capsule;
 
 use Illuminate\Container\Container;
 use Illuminate\Database\Capsule\Manager as CapsuleManager;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 use ZnCore\Db\Db\Enums\DbDriverEnum;
+use ZnCore\Db\Db\Helpers\DbHelper;
 use ZnCore\Db\Db\Libs\TableAlias;
 use ZnCore\Db\Fixture\Traits\ConfigTrait;
 

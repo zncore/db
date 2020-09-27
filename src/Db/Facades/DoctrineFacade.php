@@ -1,13 +1,14 @@
 <?php
 
-namespace ZnCore\Db\Db\Helpers;
+namespace ZnCore\Db\Db\Facades;
 
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
+use ZnCore\Base\Libs\DotEnv\DotEnv;
 use ZnCore\Db\Db\Helpers\DbHelper;
 
-class DoctrineHelper
+class DoctrineFacade
 {
 
     public static function createConnection(): Connection

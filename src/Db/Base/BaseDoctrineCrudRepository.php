@@ -13,7 +13,7 @@ use ZnCore\Domain\Interfaces\Repository\CrudRepositoryInterface;
 use ZnCore\Domain\Libs\Query;
 use ZnCore\Base\Exceptions\NotFoundException;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
-use ZnCore\Db\Db\Helpers\DoctrineQueryBuilderHelper;
+use ZnCore\Db\Db\Helpers\QueryBuilder\DoctrineQueryBuilderHelper;
 use ZnCore\Db\Db\Helpers\QueryFilter;
 
 abstract class BaseDoctrineCrudRepository extends BaseDoctrineRepository implements CrudRepositoryInterface

@@ -22,7 +22,7 @@ class DbRepository extends BaseEloquentRepository
         return FixtureEntity::class;
     }
 
-    public function __construct(\ZnCore\Db\Db\Helpers\Manager $capsule)
+    public function __construct(\ZnCore\Db\Db\Capsule\Manager $capsule)
     {
         parent::__construct($capsule);
 

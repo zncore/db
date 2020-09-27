@@ -6,7 +6,8 @@ use Illuminate\Database\Schema\Builder;
 use Illuminate\Support\Facades\DB;
 use ZnCore\Db\Db\Enums\DbDriverEnum;
 use ZnCore\Db\Db\Helpers\DbHelper;
-use ZnCore\Db\Db\Helpers\Manager;
+use ZnCore\Db\Db\Capsule\Manager;
+use ZnCore\Db\Db\Helpers\SqlHelper;
 
 abstract class BaseCreateTableMigration extends BaseMigration
 {
@@ -28,9 +29,9 @@ abstract class BaseCreateTableMigration extends BaseMigration
 
     public function up(Builder $schema)
     {
-        $isHasSchema = DbHelper::isHasSchemaInTableName($this->tableNameAlias());
+        $isHasSchema = SqlHelper::isHasSchemaInTableName($this->tableNameAlias());
         if ($isHasSchema) {
-            $schemaName = DbHelper::extractSchemaFormTableName($this->tableNameAlias());
+            $schemaName = SqlHelper::extractSchemaFormTableName($this->tableNameAlias());
             $this->getCapsule()->getConnection()->select('CREATE SCHEMA IF NOT EXISTS "'.$schemaName.'";');
         }
         $schema->create($this->tableNameAlias(), $this->tableSchema());
@@ -49,7 +50,7 @@ abstract class BaseCreateTableMigration extends BaseMigration
         $connection = $schema->getConnection();
         $driver = $connection->getConfig('driver');
         $table = $this->tableNameAlias();
-        $table = DbHelper::generateRawTableName($table);
+        $table = SqlHelper::generateRawTableName($table);
         $tableComment = $this->tableComment;
         $sql = '';
         if ($driver == DbDriverEnum::MYSQL) {

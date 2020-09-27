@@ -4,7 +4,7 @@
 use Symfony\Component\Console\Application;
 
 require __DIR__ . '/../../../autoload.php';
-\ZnCore\Base\Libs\Env\DotEnvHelper::init();
+\ZnCore\Base\Libs\DotEnv\DotEnv::init();
 
 // создаем консольное приложение
 $application = new Application;

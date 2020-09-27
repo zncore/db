@@ -11,7 +11,7 @@ use ZnCore\Domain\Interfaces\Repository\CrudRepositoryInterface;
 use ZnCore\Domain\Libs\Query;
 use ZnCore\Base\Exceptions\NotFoundException;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
-use ZnCore\Db\Db\Helpers\QueryBuilderHelper;
+use ZnCore\Db\Db\Helpers\QueryBuilder\EloquentQueryBuilderHelper;
 use ZnCore\Db\Db\Helpers\QueryFilter;
 
 abstract class BaseEloquentCrudRepository extends BaseEloquentRepository implements CrudRepositoryInterface
@@ -47,7 +47,7 @@ abstract class BaseEloquentCrudRepository extends BaseEloquentRepository impleme
     {
         $query = $this->forgeQuery($query);
         $queryBuilder = $this->getQueryBuilder();
-        QueryBuilderHelper::setWhere($query, $queryBuilder);
+        EloquentQueryBuilderHelper::setWhere($query, $queryBuilder);
         return $queryBuilder->count();
     }
 
@@ -55,10 +55,10 @@ abstract class BaseEloquentCrudRepository extends BaseEloquentRepository impleme
     {
         $query = $this->forgeQuery($query);
         $queryBuilder = $this->getQueryBuilder();
-        QueryBuilderHelper::setWhere($query, $queryBuilder);
-        QueryBuilderHelper::setSelect($query, $queryBuilder);
-        QueryBuilderHelper::setOrder($query, $queryBuilder);
-        QueryBuilderHelper::setPaginate($query, $queryBuilder);
+        EloquentQueryBuilderHelper::setWhere($query, $queryBuilder);
+        EloquentQueryBuilderHelper::setSelect($query, $queryBuilder);
+        EloquentQueryBuilderHelper::setOrder($query, $queryBuilder);
+        EloquentQueryBuilderHelper::setPaginate($query, $queryBuilder);
         $collection = $this->allByBuilder($queryBuilder);
         return $collection;
     }
