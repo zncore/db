@@ -8,8 +8,9 @@ use ZnCore\Db\Db\Enums\DbDriverEnum;
 use ZnCore\Db\Db\Helpers\DbHelper;
 use ZnCore\Db\Db\Capsule\Manager;
 use ZnCore\Db\Db\Helpers\SqlHelper;
+use ZnCore\Db\Migration\Interfaces\MigrationInterface;
 
-abstract class BaseCreateTableMigration extends BaseMigration
+abstract class BaseCreateTableMigration extends BaseMigration implements MigrationInterface
 {
 
     protected $tableComment = '';

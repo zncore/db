@@ -1,6 +1,6 @@
 <?php
 
-namespace ZnCore\Db\Db\Helpers;
+namespace ZnCore\Db\Fixture\Helpers;
 
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\Schema\Builder;

@@ -11,7 +11,7 @@ use ZnCore\Domain\Helpers\EntityHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Db\Db\Base\BaseEloquentRepository;
 use ZnCore\Db\Db\Enums\DbDriverEnum;
-use ZnCore\Db\Db\Helpers\StructHelper;
+use ZnCore\Db\Fixture\Helpers\StructHelper;
 use ZnCore\Db\Fixture\Entities\FixtureEntity;
 
 class DbRepository extends BaseEloquentRepository

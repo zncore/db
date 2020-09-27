@@ -8,6 +8,7 @@ use ZnCore\Db\Db\Base\BaseEloquentRepository;
 use ZnCore\Db\Migration\Base\BaseCreateTableMigration;
 use ZnCore\Db\Migration\Entities\MigrationEntity;
 use ZnCore\Base\Helpers\ClassHelper;
+use ZnCore\Db\Migration\Interfaces\MigrationInterface;
 
 //use ZnCore\Db\Db\Helpers\TableAliasHelper;
 
@@ -63,10 +64,9 @@ class HistoryRepository extends BaseEloquentRepository
         $queryBuilder->delete();
     }
 
-    public function upMigration($class)
+    public function upMigration(string $class)
     {
-        /** @var BaseCreateTableMigration $migration */
-        $migration = new $class($this->getCapsule());
+        $migration = $this->createMigrationClass($class);
         $schema = $this->getSchema();
         $connection = $schema->getConnection();
         // todo: begin transaction
@@ -78,10 +78,9 @@ class HistoryRepository extends BaseEloquentRepository
         // todo: end transaction
     }
 
-    public function downMigration($class)
+    public function downMigration(string $class)
     {
-        /** @var BaseCreateTableMigration $migration */
-        $migration = new $class($this->getCapsule());
+        $migration = $this->createMigrationClass($class);
         $schema = $this->getSchema();
         $connection = $schema->getConnection();
         // todo: begin transaction
@@ -91,6 +90,12 @@ class HistoryRepository extends BaseEloquentRepository
         self::delete($version);
         $connection->commit();
         // todo: end transaction
+    }
+
+    private function createMigrationClass(string $class): MigrationInterface {
+        $migration = new $class($this->getCapsule());
+        ClassHelper::isInstanceOf($migration, MigrationInterface::class);
+        return $migration;
     }
 
     public function all($connectionName = 'default')

@@ -3,11 +3,11 @@
 Пример фикстуры:
 
 ```php
-use ZnCore\Db\Fixture\Helpers\FixtureFactoryHelper;
+use ZnCore\Db\Fixture\Libs\FixtureGenerator;
 
-$fixture = new FixtureFactoryHelper;
+$fixture = new FixtureGenerator;
 $fixture->setCount(200);
-$fixture->setCallback(function ($index, FixtureFactoryHelper $fixtureFactory) {
+$fixture->setCallback(function ($index, FixtureGenerator $fixtureFactory) {
     return [
         'id' => $index,
         'title' => 'post ' . $index,

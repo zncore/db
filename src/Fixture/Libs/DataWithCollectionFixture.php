@@ -2,7 +2,7 @@
 
 namespace ZnCore\Db\Fixture\Libs;
 
-use ZnCore\Db\Fixture\Helpers\FixtureFactoryHelper;
+use ZnCore\Db\Fixture\Libs\FixtureGenerator;
 
 abstract class DataWithCollectionFixture extends DataFixture
 {
@@ -11,12 +11,12 @@ abstract class DataWithCollectionFixture extends DataFixture
 
     abstract public function collection(): array;
 
-    abstract public function callback($index, FixtureFactoryHelper $fixtureFactory): array;
+    abstract public function callback($index, FixtureGenerator $fixtureFactory): array;
 
     public function load()
     {
         $collection = $this->collection();
-        $fixture = new FixtureFactoryHelper;
+        $fixture = new FixtureGenerator;
         $fixture->setCount($this->count());
         $fixture->setStartIndex(count($collection) + 1);
         $fixture->setCallback([$this, 'callback']);

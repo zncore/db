@@ -1,10 +1,10 @@
 <?php
 
-namespace ZnCore\Db\Fixture\Helpers;
+namespace ZnCore\Db\Fixture\Libs;
 
 use Closure;
 
-class FixtureFactoryHelper
+class FixtureGenerator
 {
 
     private $startIndex = 1;
