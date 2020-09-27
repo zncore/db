@@ -1,6 +1,6 @@
 <?php
 
-namespace ZnCore\Db\Db\Helpers;
+namespace ZnCore\Db\Db\Libs;
 
 use Illuminate\Support\Collection;
 use Packages\Eav\Domain\Repositories\Eloquent\FieldRepository;
@@ -12,12 +12,6 @@ use ZnCore\Domain\Interfaces\ReadAllInterface;
 use ZnCore\Domain\Interfaces\Repository\RelationConfigInterface;
 use ZnCore\Domain\Relations\libs\RelationLoader;
 
-/**
- * Class QueryFilter
- *
- * @package ZnCore\Domain\Helpers\Repository
- *
- */
 class QueryFilter
 {
 

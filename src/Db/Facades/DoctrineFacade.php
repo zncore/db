@@ -6,6 +6,7 @@ use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
 use ZnCore\Base\Libs\DotEnv\DotEnv;
+use ZnCore\Db\Db\Helpers\ConfigHelper;
 use ZnCore\Db\Db\Helpers\DbHelper;
 
 class DoctrineFacade
@@ -14,7 +15,7 @@ class DoctrineFacade
     public static function createConnection(): Connection
     {
         if(isset($_ENV['DATABASE_URL'])) {
-            $dbconfig = DbHelper::parseDsn($_ENV['DATABASE_URL']);
+            $dbconfig = ConfigHelper::parseDsn($_ENV['DATABASE_URL']);
         } else {
             $dbconfig = DotEnv::get('db');
         }

@@ -7,6 +7,8 @@ use Illuminate\Database\Capsule\Manager as CapsuleManager;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 use ZnCore\Db\Db\Enums\DbDriverEnum;
+use ZnCore\Db\Db\Facades\DbFacade;
+use ZnCore\Db\Db\Helpers\ConfigHelper;
 use ZnCore\Db\Db\Helpers\DbHelper;
 use ZnCore\Db\Db\Libs\TableAlias;
 use ZnCore\Db\Fixture\Traits\ConfigTrait;
@@ -23,7 +25,7 @@ class Manager extends CapsuleManager
         parent::__construct($container);
         $config = $this->loadConfig($mainConfigFile);
         $this->tableAlias = new TableAlias;
-        $connections = DbHelper::getConfigFromEnv();
+        $connections = DbFacade::getConfigFromEnv();
         foreach ($connections as $connectionName => $connectionConfig) {
             if (!isset($connectionConfig['map'])) {
                 $connectionConfig['map'] = ArrayHelper::getValue($config, 'connection.map', []);
@@ -66,12 +68,12 @@ class Manager extends CapsuleManager
                 unset($connections[$defaultConnection]);
             }
         } else {
-            $connections = DbHelper::getConfigFromEnv();
+            $connections = DbFacade::getConfigFromEnv();
             //dd($connections);
         }
         foreach ($connections as &$connection) {
             if (!empty($connection['dsn'])) {
-                $connectionFromDsn = DbHelper::parseDsn($connection['dsn']);
+                $connectionFromDsn = ConfigHelper::parseDsn($connection['dsn']);
                 $connection = array_merge($connectionFromDsn, $connection);
             }
             if ($connection['driver'] == 'sqlite') {
