@@ -6,8 +6,8 @@
 namespace Migrations;
 
 use Illuminate\Database\Schema\Blueprint;
-use ZnCore\Db\Migration\Base\BaseCreateTableMigration;
-use ZnCore\Db\Migration\Enums\ForeignActionEnum;
+use ZnLib\Migration\Domain\Base\BaseCreateTableMigration;
+use ZnLib\Migration\Domain\Enums\ForeignActionEnum;
 
 if (!class_exists(m_2014_10_12_200000_create_post_table::class)) {
 
