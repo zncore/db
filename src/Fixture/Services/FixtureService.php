@@ -76,6 +76,7 @@ class FixtureService
         $this->dbRepository->truncateData($tableName);
 
         $deps = $dataFixture->deps();
+        $dataFixture->unload();
         $data = $dataFixture->load();
 
         if($deps) {
